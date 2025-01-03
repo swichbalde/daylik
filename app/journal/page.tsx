@@ -2,7 +2,7 @@ import { Table, TableBody, TableCell, TableHeader, TableRow } from "@/components
 import { cn } from "@/lib/utils";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import DayNote from "@/components/ui/note/DayNote";
+import DayNote from "@/components/ui/note/day-note";
 
 export default function JournalTable() {
     function getDaysInMonth(year: number, month: number): number {

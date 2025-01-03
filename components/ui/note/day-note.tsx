@@ -7,10 +7,10 @@ import {z} from "zod"
 import {toast} from "@/hooks/use-toast"
 import {
     Sheet,
-    SheetClose,
+    // SheetClose,
     SheetContent,
     SheetDescription,
-    SheetFooter,
+    // SheetFooter,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
@@ -18,14 +18,14 @@ import {
 import {
     Form,
     FormControl,
-    FormDescription,
+    // FormDescription,
     FormField,
     FormItem,
-    FormLabel,
-    FormMessage,
+    // FormLabel,
+    // FormMessage,
 } from "@/components/ui/form"
 import {PencilSquareIcon} from "@heroicons/react/24/outline";
-import MarkdownInput from "@/components/ui/note/MarkdownInput";
+import MarkdownInput from "@/components/ui/note/markdown-input";
 
 export default function DayNote() {
     const FormSchema = z.object({
@@ -65,7 +65,7 @@ export default function DayNote() {
                         <FormField
                             control={form.control}
                             name="bio"
-                            render={({field}) => (
+                            render={() => (
                                 <FormItem>
                                     <FormControl>
                                         <MarkdownInput/>
