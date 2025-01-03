@@ -10,7 +10,6 @@ export default function MarkdownInput() {
     const [markdown, setMarkdown] = useState<string>('');
     const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setMarkdown(event.target.value);
-        console.log(marked.parse(markdown))
     };
 
     return <Tabs defaultValue="plaintext" className="w-[400px] py-1">
@@ -30,7 +29,7 @@ export default function MarkdownInput() {
             <TabsContent value="markdown">
                 {markdown &&  <div
                     className="markdown-body w-10/12 p-2 border border-gray-300 rounded overflow-auto"
-                    dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(marked.parse(markdown)) }}
+                    dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(marked.parse(markdown).toString()) }}
                 />}
             </TabsContent>
         </div>
